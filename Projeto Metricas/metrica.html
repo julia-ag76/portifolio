@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resultado da Mátrica</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js">   </script>
+</head>
+<body>
+   
+    <h1>Resultado de Engajamento</h1>
+
+    <p id="resultado">Carregando...</p>
+
+    <canvas id="grafico" width="400" height="200"></canvas>
+
+    <script>
+        const params = new URLSearchParams (location.search);
+
+        const curtidas = Number (params.get('curtidas')) || 0;
+
+        const comentarios = Number (params.get('comentarios')) || 0;
+
+        const compartilhamentos = Number (params.get('compartilhamentos')) || 0;
+
+        const total = curtidas +  comentarios + compartilhamentos;
+        
+        const media = Math.round(total/3);
+
+        new Chart (document.getElementById('grafico'), {
+            type:'bar',
+            data:{
+                labels:['curtidas', 'comentarios', 'compartilhamentos'],
+                datasets: [{
+
+                    label: 'Interações',
+
+                    data:[curtidas, comentarios, compartilhamentos],
+
+                    backgroundColor: ['blue', 'purple', 'red']
+                }]
+            }
+
+        });
+
+         
+
+    </script>
+
+
+
+</body>
+</html>
