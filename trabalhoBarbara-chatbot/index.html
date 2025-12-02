@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Bot</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, rgb(136, 255, 120), #6aee65);
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #fff;
+        }
+
+
+        .primeiro {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .imagem {
+            margin: 10px;
+        }
+
+        .chatbox {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(12px);
+            text-align: center;
+            width: 400px;
+        }
+
+        .chatbox h1 {
+            margin-bottom: 20px;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .chatbox button {
+            padding: 12px 25px;
+            background: #2b474e;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .chatbox button:hover {
+            background: #38d7ff;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="primeiro">
+        <div class="chatbox">
+            <h1>Chatbot por Voz</h2>
+            <img class="imagem" src="robo_renovado.png" width="300" height="auto" alt="">
+            <button onclick="ouvir()">Falar Agora</button>
+        </div>
+    </div>
+
+    <script>
+        const pergunta = [
+            "criança que nasce antes do tempo",
+            "realizado em casa", //parto
+            "mínimo de consultas",
+            "primeira vacina",
+            "período gestacional"
+        ];
+
+        const resposta = [
+            "Prematuro",
+            "Parto domiciliar",
+            "No mínimo 6 consultas",
+            "BCG e Hepatite B",
+            "39 a 40 semanas e 6 dias"
+        ];
+
+        function falar(texto) {
+            const discurso = new SpeechSynthesisUtterance(texto);
+            discurso.lang = "pt-BR";
+            discurso.rate = 1;
+            window.speechSynthesis.speak(discurso);
+        }
+
+        function ouvir() {
+            const reconhecer = new webkitSpeechRecognition();
+            reconhecer.lang = "pt-BR";
+            reconhecer.start();
+
+            reconhecer.onresult = function (event) {
+                const textoFalado = event.results[0][0].transcript.toLowerCase();
+
+
+
+                for (let i = 0; i < pergunta.length; i++) {
+                    if (textoFalado.includes(pergunta[i])) {
+                        falar(resposta[i]);
+                        return;
+                    }
+                }
+
+                falar("Desculpe, eu não entendi.");
+            };
+        }
+
+    </script>
