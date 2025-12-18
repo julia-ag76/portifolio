@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Iluminação</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        input, button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 5px;
+        }
+
+        #resultado {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Sistema Inteligente de Iluminação Pública</h2>
+
+    <p>Digite a quantidade de pessoas na praça:</p>
+    <input type="number" id="pessoas">
+
+    <br>
+    <button onclick="verificarIluminacao()">Verificar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function verificarIluminacao() {
+            let pessoas = Number(document.getElementById("pessoas").value);
+            let resultado = document.getElementById("resultado");
+
+            if (pessoas > 30) {
+                resultado.innerText = "Iluminação em potência máxima (praça muito movimentada).";
+            } else if (pessoas > 15 && pessoas <= 30) {
+                resultado.innerText = "Iluminação em potência média (movimento moderado).";
+            } else {
+                resultado.innerText = "Iluminação em potência baixa (pouco movimento).";
+            }
+        }
+    </script>
+
+</body>
+</html>
