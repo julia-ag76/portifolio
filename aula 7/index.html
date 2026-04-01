@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmFit | Farmfit - Resultados Reais</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+<style>
+        :root {
+            --gold: #D4AF37;
+            --dark: #0a0a0a;
+            --light-dark: #1a1a1a;
+            --border: #333;
+        }
+
+        body {
+            background: var(--dark);
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .text-gold { color: var(--gold) !important; }
+        .text-secondary { color: #aaa !important; }
+
+        header {
+            border-bottom: 2px solid var(--border);
+        }
+
+         /* Hero Section */
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1350&q=80') center/cover;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .btn-gold {
+            background: var(--gold);
+            color: #000;
+            font-weight: bold;
+            border-radius: 8px;
+            border: 1px solid var(--gold);
+            transition: 0.3s;
+        }
+
+        .btn-gold:hover {
+            background: #fff;
+            transform: translateY(-3px);
+        }
+
+        .btn-outline-gold {
+            color: var(--gold);
+            border: 2px solid var(--gold);
+            background: transparent;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .btn-outline-gold:hover {
+            background: var(--gold);
+            color: #000;
+        }
+
+        .section-divider {
+            border-top: 2px dotted #444;
+            margin: 40px 0;
+        }
+
+        .metric-card {
+            background: var(--light-dark);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            transition: 0.3s;
+            height: 100%;
+        }
+
+        .metric-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+        }
+
+        .metric-value {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin: 10px 0;
+        }
+
+        .progress-container {
+            background: #333;
+            border-radius: 20px;
+            height: 12px;
+        }
+
+        .progress-bar-gold {
+            background: var(--gold);
+        }
+
+        footer {
+            border-top: 2px solid var(--gold);
+            background: #000;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top bg-dark border-bottom border-secondary">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="#">FARM<span class="text-gold">FIT</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-3">
+                    <li class="nav-item"><a class="nav-link" href="./sobre.html">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./aluno.html">Aluno</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#planos">Planos</a></li>
+                    <li class="nav-item"><a href="https://wa.me/31995251050" class="btn btn-gold px-4">Matricule-se</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1 class="display-1 fw-bold">RESULTADOS <span class="text-gold">REAIS</span></h1>
+            <p class="lead fs-4 mb-4">Transforme sua vida na melhor academia do Santa Efigênia.</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#planos" class="btn btn-outline-light btn-lg px-5">Ver Planos</a>
+                <a href="https://wa.me/31995251050" class="btn btn-gold btn-lg px-5">Começar Agora</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="servicos" class="py-5 bg-black">
+        <div class="container">
+            <h2 class="text-center text-gold mb-5 fw-bold">O Que Oferecemos</h2>
+            <div class="row g-4">
+                <div class="col-md-4 text-center">
+                    <div class="card-custom">
+                        <i class="fas fa-dumbbell fa-3x text-gold mb-3"></i>
+                        <h3>Musculação</h3>
+                        <p class="text-secondary">Equipamentos de última geração para força e hipertrofia.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="card-custom">
+                        <i class="fas fa-heartbeat fa-3x text-gold mb-3"></i>
+                        <h3>Funcional</h3>
+                        <p class="text-secondary">Treinos dinâmicos para agilidade e queima calórica.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="card-custom">
+                        <i class="fas fa-users fa-3x text-gold mb-3"></i>
+                        <h3>Aulas Coletivas</h3>
+                        <p class="text-secondary">Dança, aeróbico e motivação em grupo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="planos" class="py-5">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">Escolha seu <span class="text-gold">Plano</span></h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-5">
+                    <div class="card-custom text-center">
+                        <h3 class="py-2">Basic</h3>
+                        <p class="text-gold display-5 fw-bold">R$ 89,90</p>
+                        <p class="text-secondary">por mês</p>
+                        <hr class="border-secondary">
+                        <ul class="list-unstyled mb-4 text-start d-inline-block">
+                            <li><i class="fas fa-check text-gold me-2"></i> Acesso total à academia</li>
+                            <li><i class="fas fa-check text-gold me-2"></i> Equipamentos completos</li>
+                            <li><i class="fas fa-check text-gold me-2"></i> Avaliação inicial</li>
+                        </ul>
+                        <a href="https://wa.me/31995251050" class="btn btn-outline-light w-100 py-3">Assinar Basic</a>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="card-custom text-center border-gold" style="border-width: 2px;">
+                        <h3 class="py-2">Pro</h3>
+                        <p class="text-gold display-5 fw-bold">R$ 149,90</p>
+                        <p class="text-secondary">por mês</p>
+                        <hr class="border-secondary">
+                        <ul class="list-unstyled mb-4 text-start d-inline-block">
+                            <li><i class="fas fa-check text-gold me-2"></i> <strong>Tudo do plano Basic</strong></li>
+                            <li><i class="fas fa-check text-gold me-2"></i> Personal Trainer</li>
+                            <li><i class="fas fa-check text-gold me-2"></i> Nutricionista incluso</li>
+                        </ul>
+                        <a href="https://wa.me/31995251050" class="btn btn-gold w-100 py-3">Assinar Pro</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<footer class="py-5 mt-5">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-6 mb-4">
+                <h4 class="text-gold">FarmFit Academia</h4>
+                <p>Santa Efigênia - BH</p>
+                <p>(31) 99525-1050</p>
+                <p>contato@farmfit.com.br</p>
+            </div>
+            
+           <section class="col-md-6 text-center">
+                <h2 class="text-gold mb-4">Contato</h2>
+
+                <div class="d-flex flex-wrap justify-content-center gap-3">
+                    <a href="https://wa.me/31995251050" target="_blank" class="btn btn-outline-gold">
+                        <i class="fab fa-whatsapp me-2"></i>WhatsApp
+                    </a>
+
+                    <a href="https://instagram.com/farmfitbh" target="_blank" class="btn btn-outline-gold">
+                        <i class="fab fa-instagram me-2"></i>Instagram
+                    </a>
+
+                    <div class="btn btn-dark text-gold border-gold">
+                        <i class="fas fa-phone me-2"></i>(31) 3354-0210
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <div class="text-center pt-4 border-top border-secondary">
+            <small class="text-secondary">
+                © 2026 FarmFit Academia
+            </small>
+        </div>
+    </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

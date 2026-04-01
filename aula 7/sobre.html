@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmfit Academia | Resultados Reais</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<style>
+        :root {
+            --gold: #D4AF37;
+            --dark: #0a0a0a;
+            --light-dark: #1a1a1a;
+            --border: #333;
+        }
+
+        body {
+            background: var(--dark);
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .text-gold { color: var(--gold) !important; }
+        .text-secondary { color: #aaa !important; }
+
+        header {
+            border-bottom: 2px solid var(--border);
+        }
+
+        .btn-gold {
+            background: var(--gold);
+            color: #000;
+            font-weight: bold;
+            border-radius: 8px;
+            border: 1px solid var(--gold);
+            transition: 0.3s;
+        }
+
+        .btn-gold:hover {
+            background: #fff;
+            transform: translateY(-3px);
+        }
+
+        .btn-outline-gold {
+            color: var(--gold);
+            border: 2px solid var(--gold);
+            background: transparent;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .btn-outline-gold:hover {
+            background: var(--gold);
+            color: #000;
+        }
+
+        .section-divider {
+            border-top: 2px dotted #444;
+            margin: 40px 0;
+        }
+
+        .metric-card {
+            background: var(--light-dark);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            transition: 0.3s;
+            height: 100%;
+        }
+
+        .metric-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+        }
+
+        .metric-value {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin: 10px 0;
+        }
+
+        .progress-container {
+            background: #333;
+            border-radius: 20px;
+            height: 12px;
+        }
+
+        .progress-bar-gold {
+            background: var(--gold);
+        }
+
+        footer {
+            border-top: 2px solid var(--gold);
+            background: #000;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top bg-dark border-bottom border-secondary">
+    <div class="container">
+        <a class="navbar-brand fw-bold fs-3" href="#">FARM<span class="text-gold">FIT</span></a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto gap-3">
+                <li class="nav-item">
+                    <a href="./index.html" class="btn btn-gold px-4">Início</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section id="sobre" class="py-5" style="background-color: var(--dark);">
+    <div class="container py-5">
+        <div class="row align-items-center">
+
+            <!-- TEXTO -->
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <h2 class="text-gold fw-bold display-4 mb-4">Nossa História</h2>
+
+                <p class="lead mb-5 text-secondary" style="max-width: 500px;">
+                    A <strong class="text-white">FarmFit</strong> nasceu com o propósito de democratizar o bem-estar em Belo Horizonte com infraestrutura de ponta.
+                </p>
+
+                <div class="feature-border mb-4">
+                    <h5 class="fw-bold text-white">Missão</h5>
+                    <p class="text-secondary mb-0">
+                        Saúde e qualidade de vida em um ambiente motivador e acessível.
+                    </p>
+                </div>
+
+                <div class="feature-border">
+                    <h5 class="fw-bold text-white">Diferenciais</h5>
+                    <p class="text-secondary mb-0">
+                        Profissionais qualificados, ambiente moderno e acompanhamento constante.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="col-lg-6">
+                <div id="hairCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item active">
+                            <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=800&q=80"
+                                class="d-block w-100 rounded-4 shadow-lg"
+                                alt="Academia"
+                                style="filter: grayscale(100%); border: 1px solid #333;">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="./Fotos/WhatsApp Image 2026-03-30 at 10.30.30.jpeg"
+                                class="d-block w-100 rounded-4 shadow-lg"
+                                alt="Academia"
+                                style="filter: grayscale(100%); border: 1px solid #333;">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="./Fotos/WhatsApp Image 2026-03-26 at 10.51.40.jpeg"
+                                class="d-block w-100 rounded-4 shadow-lg"
+                                alt="Academia"
+                                style="filter: grayscale(100%); border: 1px solid #333;">
+                        </div>
+
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#hairCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+
+                    <button class="carousel-control-next" type="button" data-bs-target="#hairCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<footer class="py-5 mt-5">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-6 mb-4">
+                <h4 class="text-gold">FarmFit Academia</h4>
+                <p>Santa Efigênia - BH</p>
+                <p>(31) 99525-1050</p>
+                <p>contato@farmfit.com.br</p>
+            </div>
+            
+           <section class="col-md-6 text-center">
+                <h2 class="text-gold mb-4">Contato</h2>
+
+                <div class="d-flex flex-wrap justify-content-center gap-3">
+                    <a href="https://wa.me/31995251050" target="_blank" class="btn btn-outline-gold">
+                        <i class="fab fa-whatsapp me-2"></i>WhatsApp
+                    </a>
+
+                    <a href="https://instagram.com/farmfitbh" target="_blank" class="btn btn-outline-gold">
+                        <i class="fab fa-instagram me-2"></i>Instagram
+                    </a>
+
+                    <div class="btn btn-dark text-gold border-gold">
+                        <i class="fas fa-phone me-2"></i>(31) 3354-0210
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <div class="text-center pt-4 border-top border-secondary">
+            <small class="text-secondary">
+                © 2026 FarmFit Academia
+            </small>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
